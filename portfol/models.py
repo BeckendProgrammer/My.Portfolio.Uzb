@@ -23,7 +23,7 @@ class Category(models.Model):
         verbose_name_plural = 'Kategoriyalar'
         ordering = ('-created_at','status')
 
-    def str(self) -> str:
+    def __str__(self) -> str:
         return self.name
     
     def get_absolute_url(self):
@@ -49,7 +49,7 @@ class Site(models.Model):
         verbose_name_plural = "Saytlar"
         ordering = ('-created_at',)
 
-    def str(self):
+    def __str__(self):
         return self.title
 
     def get_absolute_url(self):
@@ -71,6 +71,6 @@ class Comment(models.Model):
         verbose_name_plural = "Izohlar"
         ordering = ("-created_at",)
 
-    def str(self):
+    def __str__(self):
         text = f"{self.name}  - {self.email}"
         return text

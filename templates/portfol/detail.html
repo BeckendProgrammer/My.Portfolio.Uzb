@@ -4,16 +4,15 @@
 
 {% block content %}
 
-<link rel="stylesheet" href="{% static 'css/article.css' %}">
+<link rel="stylesheet" href="{% static 'css/artice.css' %}">
 <main>
     <section class="top-news">
         {% most_comments %}
         <div class="portfol-layout">
             <div class="portfol-layout__header">
-                <div class="header-time"><span class="time-ui">{{ maqola.created_at|date:"d/m/Y | f"}}</span></div>
-                <div class="content-views"><span class="">{{ maqola.see }}</span></div>
+                <div class="header-time"><span class="time-ui">{{ sayt.created_at|date:"d/m/Y | f"}}</span></div>
+                <div class="content-views"><span class="">{{ sayt.see }}</span></div>
                 <div class="share-news">
-                    <a class="share-news__label" href="{% url 'portfol:share' maqola.id  %}">Улашинг</a>
 
                 </div>
             </div>
@@ -21,19 +20,19 @@
                 <h1>{{ sayt.title }}</h1>
                 <h4>{{ sayt.subtitle }}</h4>
                 <div class="content-img">
-                    <img src="{{ maqola.photo.url }}" alt="">
-                    <div class="main-img__caption">{{ maqola.photo }}</div>
+                    <img src="{{ sayt.photo.url }}" alt="">
+                    <div class="main-img__caption">{{ sayt.photo }}</div>
                 </div>
-                <p dir="auto">{{ maqola.body }}</p>
+                <p dir="auto">{{ sayt.body }}</p>
                 <div class="article-layout__bottom">
                     <ul>
-                        {% for tag in maqola.tags.all %}
+                        {% for tag in sayt.tags.all %}
                         <li class="bottom-tag"><a href="{% url 'portfol:site_list_by_tag' tag.slug %}">#{{ tag.name }}</a></li>
                         {% endfor %}
                     </ul>
                 </div>
             </div>
-            <div class="portfol-layout__comment">
+            <div class="article-layout__comment">
                 <div class="comment-head"><span>4 comments</span>test</div>
                 <div class="comment-form">
                     <div class="comment-avatar">J</div>
@@ -87,7 +86,7 @@
                 e.preventDefault();
             }
         </script>
-        <div class="article__right">
+        <div class="portfol__right">
             {% lastest_postes %}
             {% most_view %}
         </div>
@@ -95,7 +94,6 @@
     <section class="bottom-news">
         <div class="tag-news">
             <div class="tags-news__head">
-                <a class="aylana-label" href="#"><span>O'xshash maqolalar</span></a>
             </div>
             <div class="tags-news__grid">
                 {% for site in sites %}
@@ -110,71 +108,71 @@
 
             </div>
         </div>
-        <div class="biznes-news">
-            <div class="biznes-news__head">
-                <a class="aylana-label" href="#"><span>Biznes</span></a>
+        <div class="site-news">
+            <div class="site-news__head">
+                <a class="aylana-label" href="#"><span>Saytlarim</span></a>
             </div>
-            <div class="biznes-carousel">
+            <div class="site-carousel">
                 <div class="carousel" data-flickity='{ "groupCells": 4 }'>
 
                     <div class="carousel-cell">
                         <a href="">
                             <div class="carousel-img">
-                                <img src="{% static 'images/b2 (1).jpg' %}" alt="" srcset="">
+                                <img src="{% static 'images/1 (1).png' %}" alt="" srcset="">
                             </div>
                             <div class="carousel-content">
-                                Базалт геосеткаси ва базалт иссиқлик сақловчи плиталари билан янада мустаҳкам
+                                Above, you see the codes from inside i mean from visual studio code
                             </div>
                         </a>
                     </div>
                     <div class="carousel-cell">
                         <a href="">
                             <div class="carousel-img">
-                                <img src="{% static 'images/b2 (2).jpg' %}" alt="" srcset="">
+                                <img src="{% static 'images/1 (2).png' %}" alt="" srcset="">
                             </div>
                             <div class="carousel-content">
-                                Mobiuz юртимиздаги офислари тармоғини янгилашда давом этмоқда
+                                Here i gathered all codes from each file in my own sites
                             </div>
                         </a>
                     </div>
                     <div class="carousel-cell">
                         <a href="">
                             <div class="carousel-img">
-                                <img src="{% static 'images/b2 (3).jpg' %}" alt="" srcset="">
+                                <img src="{% static 'images/1 (3).png' %}" alt="" srcset="">
                             </div>
                             <div class="carousel-content">
-                                Тошкентда уч қитъани бирлаштирган чарм-пойабзал кўргазмаси иш бошлади
+                                I cannot understand why do we need to write informations about photos above
                             </div>
                         </a>
                     </div>
                     <div class="carousel-cell">
                         <a href="">
                             <div class="carousel-img">
-                                <img src="{% static 'images/b2 (4).jpg' %}" alt="" srcset="">
+                                <img src="{% static 'images/1 (4).png' %}" alt="" srcset="">
                             </div>
                             <div class="carousel-content">
-                                Tenge Business: Бизнесингизни онлайн бошқаринг
+                                I wanna say only one thing while you reading this i'm loughing you know why, because you spent your time useless
                             </div>
                         </a>
                     </div>
                     <div class="carousel-cell">
                         <a href="">
                             <div class="carousel-img">
-                                <img src="{% static 'images/b2 (3).jpg' %}" alt="" srcset="">
+                                <img src="{% static 'images/1 (5).png' %}" alt="" srcset="">
                             </div>
                             <div class="carousel-content">
-                                Базалт геосеткаси ва базалт иссиқлик сақловчи плиталари билан янада мустаҳкам
+                                I cannot understand why do we need to write informations about photos above
                             </div>
                         </a>
                     </div>
                     <div class="carousel-cell">
                         <a href="">
                             <div class="carousel-img">
-                                <img src="{% static 'images/KmLDjjx7UpPG3D6HNfcfHQmenryFBxgA_medium.jpg' %}" alt=""
+                                <img src="{% static 'images/1 (6).png' %}" alt=""
                                     srcset="">
                             </div>
                             <div class="carousel-content">
-                                Базалт геосеткаси ва базалт иссиқлик сақловчи плиталари билан янада мустаҳкам
+                                Above, you see the codes from inside i mean from visual studio code
                             </div>
                         </a>
                     </div>

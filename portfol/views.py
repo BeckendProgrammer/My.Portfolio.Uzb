@@ -174,14 +174,14 @@ def category_list(request, id):
 
     categories = Category.objects.filter(status='active')
 
-    paginator = Paginator(posts, 1)
+    paginator = Paginator(sites, 1)
     page = request.GET.get('page')
     try:
-        posts = paginator.page(page)
+        sites = paginator.page(page)
     except PageNotAnInteger:
-        posts = paginator.page(1)
+        sites = paginator.page(1)
     except EmptyPage:
-        posts = paginator.page(paginator.num_pages)
+        sites = paginator.page(paginator.num_pages)
 
     context = {
         'category_object': category_object,

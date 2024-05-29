@@ -18,8 +18,8 @@
             <div class="center-news__grid">
                 {% for sayt in last_news %}
                 <a href="{{ sayt.get_absolute_url }}">
-                    {% if sayt.photo %}
-                    <img src="{{ satr.photo.url }}" alt="">
+                    {% if satr.photo %}
+                    <img src="{{ sayt.photo.url }}" alt="">
                     {% endif %}
                     <div class="center-news__grid-content">
                         <div><span class="time-ui">{{ sayt.created_at|date:"d/m/Y | f" }}</span></div>
@@ -49,71 +49,71 @@
                 {% include "paginator.html" with page=saytlar %}
             </div>
         </div>
-        <div class="biznes-news">
-            <div class="biznes-news__head">
-                <a class="aylana-label" href="#"><span>Biznes</span></a>
+        <div class="saytlar-news">
+            <div class="saytlar-news__head">
+                <a class="aylana-label" href="#"><span>Saytlarim</span></a>
             </div>
-            <div class="biznes-carousel">
+            <div class="saytlar-carousel">
                 <div class="carousel" data-flickity='{ "groupCells": 4 }'>
 
                     <div class="carousel-cell">
                         <a href="">
                             <div class="carousel-img">
-                                <img src="{% static 'images/b2 (1).jpg' %}" alt="" srcset="">
+                                <img src="{% static 'images/1.png' %}" alt="" srcset="">
                             </div>
                             <div class="carousel-content">
-                                Базалт геосеткаси ва базалт иссиқлик сақловчи плиталари билан янада мустаҳкам
+                                Mening saytlarimning qanday qilib ishlashi
                             </div>
                         </a>
                     </div>
                     <div class="carousel-cell">
                         <a href="">
                             <div class="carousel-img">
-                                <img src="{% static 'images/b2 (2).jpg' %}" alt="" srcset="">
+                                <img src="{% static 'images/2.png' %}" alt="" srcset="">
                             </div>
                             <div class="carousel-content">
-                                Mobiuz юртимиздаги офислари тармоғини янгилашда давом этмоқда
+                                Here's shown you can control with my some sites in my portfolio
                             </div>
                         </a>
                     </div>
                     <div class="carousel-cell">
                         <a href="">
                             <div class="carousel-img">
-                                <img src="{% static 'images/b2 (3).jpg' %}" alt="" srcset="">
+                                <img src="{% static 'images/3.png' %}" alt="" srcset="">
                             </div>
                             <div class="carousel-content">
-                                Тошкентда уч қитъани бирлаштирган чарм-пойабзал кўргазмаси иш бошлади
+                                How i create by using API not front-end part, and this means i know my job as good as needed
                             </div>
                         </a>
                     </div>
                     <div class="carousel-cell">
                         <a href="">
                             <div class="carousel-img">
-                                <img src="{% static 'images/b2 (4).jpg' %}" alt="" srcset="">
+                                <img src="{% static 'images/4.png' %}" alt="" srcset="">
                             </div>
                             <div class="carousel-content">
-                                Tenge Business: Бизнесингизни онлайн бошқаринг
+                                My another site where i used API, but i wanted to use front-end and remembered that i'm back-ender ahahahah
                             </div>
                         </a>
                     </div>
                     <div class="carousel-cell">
                         <a href="">
                             <div class="carousel-img">
-                                <img src="{% static 'images/b2 (3).jpg' %}" alt="" srcset="">
+                                <img src="{% static 'images/3.png' %}" alt="" srcset="">
                             </div>
                             <div class="carousel-content">
-                                Базалт геосеткаси ва базалт иссиқлик сақловчи плиталари билан янада мустаҳкам
+                                Here's shown you can control with my some sites in my portfolio
                             </div>
                         </a>
                     </div>
                     <div class="carousel-cell">
                         <a href="">
                             <div class="carousel-img">
-                                <img src="{% static 'images/KmLDjjx7UpPG3D6HNfcfHQmenryFBxgA_medium.jpg' %}" alt=""
+                                <img src="{% static 'images/1.png' %}" alt=""
                                     srcset="">
                             </div>
                             <div class="carousel-content">
-                                Базалт геосеткаси ва базалт иссиқлик сақловчи плиталари билан янада мустаҳкам
+                                My another site where i used API, but i wanted to use front-end and remembered that i'm back-ender ahahahah
                             </div>
                         </a>
                     </div>
@@ -121,7 +121,6 @@
             </div>
         </div>
         <div class="media-news">
-            <a class="aylana-label" href="#"><span>Media Yangilikllar</span></a>
             <div class="media-container">
                 {% for site in videos %}
                 <a href="{{ site.get_absolute_url }}">

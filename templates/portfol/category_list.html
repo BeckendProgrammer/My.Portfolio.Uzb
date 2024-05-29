@@ -4,13 +4,13 @@
 {% block content %}
 <main>
     <section class="lower-part">
-        <div class="maqolalar-news">
-            <a class="aylana-label" href="#"><span>{{ category_object }} kategoriyasiga doir maqolalar</span></a>
-            <div class="maqolalar-container">
+        <div class="saytlar-news">
+            <a class="aylana-label" href="#"><span>{{ category_object }} kategoriyasiga doir saytlar</span></a>
+            <div class="saytlar-container">
                 {% for site in sites %}
                 <a href="{{ site.get_absolute_url }}">
                     <img src="{{ site.photo.url }}" alt="">
-                    <div class="maqolalar-container__content">
+                    <div class="saytlar">
                         <h5>{{ site.title }}</h5>
                         <p>{{ site.body|slice:"350" }}</p>
                     </div>
